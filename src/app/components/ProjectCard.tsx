@@ -2,13 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   techStack: string[];
-  imageUrl: string;
+  imageUrl: string | StaticImageData;  // <-- Changed here
   darkMode: boolean;
   projectLink?: string;
 }
