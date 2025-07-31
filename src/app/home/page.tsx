@@ -274,31 +274,31 @@ const Home = () => {
 </section>
 
 {/* Projects Section */}
-<section id="projects" className="px-6 py-24 max-w-6xl mx-auto">
-  <div
-    className={`transition-all duration-300 p-6 rounded-lg shadow-lg
-      ${darkMode ? "bg-gray-900 border border-green-600" : "bg-white border border-indigo-200"}
-    `}
-  >
-    <h2 className={`text-3xl font-bold mb-8 text-center ${darkMode ? "text-green-300" : "text-indigo-700"}`}>
-      Projects
-    </h2>
+ <section id="projects" className="px-6 py-24 max-w-6xl mx-auto">
+          <div
+            className={`transition-all duration-300 p-6 rounded-lg shadow-lg
+              ${darkMode ? "bg-gray-900 border border-green-600" : "bg-white border border-indigo-200"}
+            `}
+          >
+            <h2 className={`text-3xl font-bold mb-8 text-center ${darkMode ? "text-green-300" : "text-indigo-700"}`}>
+              Projects
+            </h2>
 
-    <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {projects.map((proj, index) => (
-        <ProjectCard
-          key={index}
-          title={proj.title}
-          description={proj.description}
-          techStack={proj.techStack}
-          imageUrl={proj.imageUrl}
-          darkMode={darkMode}
-          projectLink={proj.projectLink}
-        />
-      ))}
-    </div>
-  </div>
-</section>
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {projects.map((proj, index) => (
+                <ProjectCard
+                  key={index}
+                  title={proj.title}
+                  description={proj.description}
+                  techStack={proj.techStack}
+                  imageUrl={proj.imageUrl}  // <-- works fine now
+                  darkMode={darkMode}
+                  projectLink={proj.projectLink}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
 
 
